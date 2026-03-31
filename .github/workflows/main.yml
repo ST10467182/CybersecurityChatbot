@@ -1,0 +1,29 @@
+name: .NET Build and CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 8
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore NuGet dependencies
+      run: dotnet restore CybersecurityChatbot/CybersecurityChatbot.csproj
+
+    - name: Build project
+      run: dotnet build CybersecurityChatbot/CybersecurityChatbot.csproj --no-restore --configuration Release
+
+    - name: Confirm build success
+      run: echo "Build completed successfully. CI passed."
