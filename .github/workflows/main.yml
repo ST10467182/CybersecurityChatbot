@@ -20,10 +20,10 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore NuGet dependencies
-      run: dotnet restore CybersecurityChatbot/CybersecurityChatbot.csproj
+      run: run: dotnet restore
 
     - name: Build project
-      run: dotnet build CybersecurityChatbot/CybersecurityChatbot.csproj --no-restore --configuration Release
+      run: run: dotnet build --no-restore --configuration Release
 
     - name: Confirm build success
       run: echo "Build completed successfully. CI passed."
