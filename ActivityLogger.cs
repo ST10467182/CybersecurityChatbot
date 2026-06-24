@@ -64,5 +64,6 @@ namespace CybersecurityChatbotGUI
 
         // Returns total number of logged actions
         public int GetCount() => _log.Count;
+
     }
 }
