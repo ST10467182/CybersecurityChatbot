@@ -16,6 +16,7 @@ namespace CybersecurityChatbotGUI
 {
     partial class MainForm
     {
+
         private System.ComponentModel.IContainer? components = null;
 
         // ===== SHARED CONTROLS =====
