@@ -233,6 +233,7 @@ namespace CybersecurityChatbotGUI
 
             string feedback = _scoreFeedback[feedbackKey];
             return $"Quiz Complete!\n\nYour score: {_score}/{total} ({percentage}%)\n\n{feedback}";
+
         }
     }
 }
