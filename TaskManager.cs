@@ -36,6 +36,7 @@ namespace CybersecurityChatbotGUI
         private readonly string _dbPath;
         private readonly string _connectionString;
 
+
         public TaskManager()
         {
             // Store the database file next to the executable
