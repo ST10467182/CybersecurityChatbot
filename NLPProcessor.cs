@@ -200,6 +200,7 @@ namespace CybersecurityChatbotGUI
                     // Clean up trailing punctuation
                     timeframe = timeframe.TrimEnd('.', '!', '?', ',');
                     if (timeframe.Length > 0) return timeframe;
+
                 }
             }
 
